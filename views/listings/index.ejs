@@ -1,0 +1,35 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+  <!-- <h1>All listings</h1> -->
+    <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 mt-4">
+    <% for(let listing of alistings) { %>
+    <a href="/listings/<%=listing.id%>" class="listing-link">
+    <div class="card col listing-card" >
+        <img src="<%=listing.Image.url%>" class="card-img-top" alt="listing-image">
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+        <h5 class="card-title"><%=listing.title.split(' ').slice(0, 2).join(' ')%>
+          <% if (listing.title.split(' ').length >2) { %>
+            ...
+          <% } %>
+        </h5>
+        <p class="card-text">
+          <%= listing.Description.split(' ').slice(0,15).join(' ') %>
+          <% if (listing.Description.split(' ').length >15) { %>
+            ...
+          <% } %>
+        </p>
+        <p class="card-price"> &#x20B9 <%=listing.Price%></p>
+        <!-- <p><%=listing.Location%></p>
+        <p><%=listing.Country%></p> -->
+        </div>
+      </div>
+    </a>
+
+      <% } %>
+    </div>
+
+
+
+
+</body>

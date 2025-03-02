@@ -1,0 +1,38 @@
+<% layout("/layouts/boilerplate")%>
+
+<div class="loginsignupform">
+<div class="row log mt-5 mb-5">
+    <h4 class="offset-1 mt-3 mb-3">Login</h4>
+    <div class="col-10 offset-1">
+        <form action="/login" method="post" class="needs-validation mb-3 " novalidate >
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" id="username" required>
+                <div class="valid-feedback">Looks good!</div>    
+                <div class="invalid-feedback">Username Mandatory!</div> 
+            </div> 
+
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password" required>
+                <div class="valid-feedback">Title Looks good!</div>    
+                <div class="invalid-feedback">Enter valid password</div> 
+            </div> 
+
+
+            <button class="btn btn-success mb-3">Login</button>
+            <div class="acc">
+            <span>Don't have an account? <a href="/signup">Sign-Up</a></span>
+            </div> 
+
+            <a id="google-link" href="https://google.com/" target="_blank">
+            <div class="google mt-3">
+            <span><img src="/Images/googlelogo.jpg" alt="">Continue With Google</span>
+            </div>
+            </a>
+
+        </form>
+     </div>
+</div>
+</div>
